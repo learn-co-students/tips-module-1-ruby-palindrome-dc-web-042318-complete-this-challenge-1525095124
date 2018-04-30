@@ -1,7 +1,15 @@
+require 'pry'
+
 def palindrome(string)
-    new_word = []
-    string.split('').each do |letter|
-        new_word.unshift(letter)
+    test = string.split('')
+    last = (test.length) - 1
+    index = 0
+    while index < test.length
+        if test[0] != test[last]
+            return false
+        end
+        index += 1
+        last -= 1
+        return true
     end
-    new_word.join
 end
