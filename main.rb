@@ -1,16 +1,17 @@
-def palindrome?(string)
-  if string.length == 0
-    return true
-  end
-  array = string.split('')
-  if array[0] == array[-1]
-    array.slice!(0)
-    array.slice!(-1)
-    string = array.join
-    palindrome?(string)
+def palindrome?(string, n = 0)
+  return true if string.length / 2  == n 
+  if string[n] == string[-1 - n]
+    n += 1
+    palindrome?(string, n)
   else
     return false
   end
 end
 
-palindrome?("noon")
+puts palindrome?('aaaaa')
+puts palindrome?('noon')
+puts palindrome?('aa')
+puts palindrome?('a')
+puts palindrome?('h anna h')
+puts palindrome?('kjhjhuu')
+puts palindrome?('')
