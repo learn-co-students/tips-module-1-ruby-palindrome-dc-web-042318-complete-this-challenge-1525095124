@@ -1,7 +1,6 @@
 def palindrome?(string)
   if string.length == 0
     return true
-    puts 'done'
   end
   array = string.split('')
   if array[0] == array[-1]
