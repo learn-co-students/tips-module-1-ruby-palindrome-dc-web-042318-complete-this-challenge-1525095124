@@ -9,6 +9,6 @@ def palindrome(string)
             return false
         end
         index += 1
-        return true
     end
+    return true
 end
