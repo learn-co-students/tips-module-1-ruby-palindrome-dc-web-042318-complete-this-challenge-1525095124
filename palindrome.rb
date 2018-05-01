@@ -5,11 +5,10 @@ def palindrome(string)
     last = (test.length) - 1
     index = 0
     while index < test.length
-        if test[0] != test[last]
+        if test[index] != test[last - index]
             return false
         end
         index += 1
-        last -= 1
         return true
     end
 end
